@@ -1,5 +1,6 @@
 package my.company.simplecalculator; 
 
+import java.text.DecimalFormat;
 import java.util.Scanner; 
 import java.util.InputMismatchException;
 
@@ -12,6 +13,7 @@ public class SimpleCalculator {
                 
     }
     public static void runCalculator (){
+        DecimalFormat format = new DecimalFormat("0.#");
         System.out.println("Simple Arithmetic Calculator");
         System.out.println("--------------------");
         System.out.println("Please choose an option:");
@@ -62,7 +64,7 @@ public class SimpleCalculator {
             }
         }
                 double c=a+b;
-                System.out.println("Result: "+c);
+                System.out.println("Result: "+format.format(c));
                 runCalculator();
             }
             case (double)2 -> { 
@@ -91,7 +93,7 @@ public class SimpleCalculator {
             }
         }
                 double c = a-b;
-                System.out.println("Result: "+c);
+                System.out.println("Result: "+format.format(c));
                 runCalculator();
             }
             case (double)3 -> { 
@@ -120,7 +122,7 @@ public class SimpleCalculator {
             }
         }
                 double c = a*b;
-                System.out.println("Result: "+c);
+                System.out.println("Result: "+format.format(c));
                 runCalculator();
             }
             case (double)4 -> {
@@ -158,7 +160,7 @@ public class SimpleCalculator {
         }
                  
                 double c = a/b;
-                System.out.println("Result: "+c);
+                System.out.println("Result: "+format.format(c));
                 runCalculator();
             }
             case (double)5 -> System.exit(0);
