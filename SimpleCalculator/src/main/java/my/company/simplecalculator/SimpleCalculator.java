@@ -38,7 +38,7 @@ public class SimpleCalculator {
         }
         
         switch (userInput) {
-            case (double)1 -> {
+            case (double)1 : {
                 System.out.println("Enter the first number (a):");
                 double a=0;
                 validInput=false;
@@ -66,8 +66,9 @@ public class SimpleCalculator {
                 double c=a+b;
                 System.out.println("Result: "+format.format(c));
                 runCalculator();
+                break;
             }
-            case (double)2 -> { 
+            case (double)2 : { 
                 System.out.println("Enter the first number (a):");
                 double a = 0;
                 validInput=false;
@@ -95,8 +96,9 @@ public class SimpleCalculator {
                 double c = a-b;
                 System.out.println("Result: "+format.format(c));
                 runCalculator();
+                break;
             }
-            case (double)3 -> { 
+            case (double)3 : { 
                 System.out.println("Enter the first number (a):");
                 double a = 0;
                 validInput=false;
@@ -124,8 +126,9 @@ public class SimpleCalculator {
                 double c = a*b;
                 System.out.println("Result: "+format.format(c));
                 runCalculator();
+                break;
             }
-            case (double)4 -> {
+            case (double)4 : {
                 System.out.println("Enter the first number (a):");
                 double a = 0;
                 validInput=false;
@@ -162,9 +165,13 @@ public class SimpleCalculator {
                 double c = a/b;
                 System.out.println("Result: "+format.format(c));
                 runCalculator();
+                break;
             }
-            case (double)5 -> System.exit(0);
-            default -> {
+            case (double)5 :{
+                System.exit(0);
+             
+            }
+        default : {
                 System.out.println("Invalid selection. Please choose a number from 1 to 5.");
                 runCalculator();
             }
